@@ -1,0 +1,258 @@
+// main: style.less
+// out: style.css, compress:truee
+@import url(http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css);
+@import "variables.less";
+@import "../../../Projeto Julianus/main.less";
+
+
+.genesis();
+
+html, body{
+	height: 100%;
+	width: 100%;
+	font-family: @mainFont;
+}
+
+p{
+	font-family: @textFont;
+}
+
+@{formButtons}{
+	.defaultDivWidth (10px, 40px, left);
+	padding: 10px 20px;
+	background: @mainColor;
+	color: white;
+	font-family: @textFont;
+	font-size: 14px;
+	border:none;
+	font-weight: 100;
+
+}
+
+@{formButtonsHA}{
+	border: 1px solid orange;
+	cursor: pointer;
+}
+
+.vr{
+	.defaultDiv (1px, 100%, left);
+	background: #cacaca;
+}
+
+.opaBG{
+	.defaultDiv (100%, 100%, left);
+	background: url(../img/bgopa.png)repeat;
+	position: absolute;
+}
+
+.hide{display: none}
+.blur{.filter(~"blur(1px)!important" );.opacity(0.3);}
+
+hr{
+	border:none;
+	border-bottom: 1px solid #666;
+}
+
+header#normalHeader{
+	.defaultDiv (100%, 109px, left);
+	.menu{
+		height: 50%;
+		float: right;
+		margin-top: 20px;
+		li{
+			.defaultDivWidth (50px, 10px, left);
+			padding: 15px;
+			font-size: 18px;
+			color: @mainColor;
+			&:hover{
+				cursor:pointer;
+			}
+		}
+	}
+}
+
+header#rwdHeader{
+	.defaultDiv (100%, 50px, left);
+	background: @mainColor;
+	display: none;
+
+}
+
+footer{
+	.defaultDiv (100%, 30px, left);
+	background: @mainColor;
+	position: relative;
+	bottom: 0;
+	margin-top: 50px;
+}
+
+#tubular-container{
+	width: 100% !important;
+	height: 385px !important;
+	.position(absolute, 10) !important; 
+	left: 0;
+	top: 970px;
+	p{
+		font-size: 40px;
+		color: white;
+		font-weight: 100;
+		margin-top: 130px;
+		strong{
+			font-size: 190%;
+		}
+	}
+	iframe{
+		top: -250px !important;
+	}
+
+
+}
+
+#tubular-shield{
+	z-index: -2 !important;
+}
+
+.content{
+	height: 385px;
+	margin-top: 25px;
+	float: left;
+	> div{
+		height: 100%;
+		width: 31% !important;
+		&:last-child{
+			border:none !important;
+		} 
+		.icone{
+			width: 150px;
+			height: 150px;
+			margin:0 auto;
+			border-radius: 100%;
+			background: #cacaca;
+		}
+		p{
+			font-size: 14px;
+			padding: 0 10px;
+			font-weight: 100;
+			color: @subColor;
+			line-height: 24px;
+			margin-top: 25px;
+		}
+	}
+}
+
+.animation{
+	.defaultDiv (100%, 410px, left);
+	overflow: hidden;
+}
+
+/* INTERNAS */
+
+#planos{
+	height:640px;
+	float: left;
+	margin-top: 50px;
+	overflow: hidden;
+	ul{
+		height: 100%; 
+		overflow: hidden;
+		float: left;
+		li{
+			.plano_title{
+				font-family: @textFont;
+				font-size: 18px;
+				color: cornsilk;
+				font-weight: 100;
+				text-align: left;
+				padding-bottom: 20px;
+			}
+			height: 100%; 
+			.transition( all 1s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+			.imagem{
+				.defaultDiv (100%, 290px, left);
+				.transform(skewy(20deg));
+				overflow: hidden;
+				margin-top: -25px;
+				img{
+					.defaultDiv (auto, 110%, left);
+					.transform(skewy(-20deg));
+				}
+			}
+			&:hover{
+				.opacity(1) !important;
+				.filter(~"blur(0)!important" );
+				+.planobg{
+					display: block;
+				}
+			}
+			.preco{
+				div{
+					font-family: @textFont;
+					font-size: 95px;
+					color: @mainColor;
+					font-weight: bold;
+					text-align: left;
+					margin: 15px 0;
+					float: left;
+					text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.34);
+					float: left;
+					width: 100%;
+					border-bottom: 1px solid #3c3c3c;
+					span{
+						font-size: 25px;
+						font-weight: 100;
+					}
+				}
+				p{
+					font-family: @textFont;
+					font-size: 14px;
+					color: #bebebe;
+					font-weight: 100;
+					text-align: left;
+					line-height: 20px;
+					padding-bottom: 25px;
+					.transition( all 1s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+				}
+			}
+		}
+	}
+
+	.planoContent{
+		height: 100%;
+		float: left;
+		> div{
+			.transition( all 1s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+			.defaultDivHeight(100%, 250px, left);
+			.opacity(0);
+		}
+		h1{
+			font-family: @textFont;
+			font-size: 85px;
+			color: @mainColor;
+			font-weight: bold;
+			text-align: left;
+		}
+		p{
+			font-family: @textFont;
+			font-size: 16px;
+			color: cornsilk;
+			font-weight: 100;
+			text-align: left;
+			line-height: 23px;
+			margin-bottom: 15px;
+		}
+		a{
+			font-family: @textFont;
+			font-size: 13px;
+			color: white;
+			font-weight: 100;
+			text-align: left;
+			margin: 15px 0;
+			float: left;
+		}
+	}
+	
+	.pl1_anim{.transform(translateY(650px));}
+	.pl_opa{.opacity(1) !important;}		
+	.pl_grayscale{.filter(~"blur(0)") !important;}
+}
+
