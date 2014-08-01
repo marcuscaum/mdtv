@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="less/internas.min.css">
     <script type="text/javascript"  src="js/jquery.js"></script>
     <script type="text/javascript"  src="js/wow.js"></script>
+    <script type="text/javascript"  src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+
     <style>
         .edgeLoad-EDGE-3152717 { visibility:hidden; }
         .EDGE-3152717{background:none !important;}
@@ -98,7 +100,7 @@
 	<script src="js/animations.js"></script>
 	<script>
 
-	ANIMATIONS.planos();
+	ANIMATIONS.teste();
 	ANIMATIONS.menu();
 
 	</script>

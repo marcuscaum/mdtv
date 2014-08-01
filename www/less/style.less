@@ -1,7 +1,23 @@
-// main: style.less
-// out: style.css, compress:truee
+/*
+
+██╗███╗   ███╗ █████╗ ██╗  ██╗██╗███████╗
+██║████╗ ████║██╔══██╗╚██╗██╔╝██║██╔════╝
+██║██╔████╔██║███████║ ╚███╔╝ ██║███████╗
+██║██║╚██╔╝██║██╔══██║ ██╔██╗ ██║╚════██║
+██║██║ ╚═╝ ██║██║  ██║██╔╝ ██╗██║███████║
+╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
+
+--------------------------------------------
+--- Desenvolvido por Marcus Lucas P Caum ---
+----------- Agência Studio Imaxis ----------
+--------------------------------------------
+
+*/
+
+
 @import url(http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css);
 @import "variables.less";
+@import "animate.min.css";
 @import "../../../Projeto Julianus/main.less";
 
 
@@ -254,5 +270,147 @@ footer{
 	.pl1_anim{.transform(translateY(650px));}
 	.pl_opa{.opacity(1) !important;}		
 	.pl_grayscale{.filter(~"blur(0)") !important;}
+}
+
+
+#duvidas{ 
+	height:640px;
+	float: left;
+	margin-top: 50px;
+	width: 100%;
+
+	.hidden{    
+		width: 0px !important;
+	    height: 0px !important;
+	    opacity:0 !important;
+	    margin:0 !important;
+	    padding:0 !important;
+	}
+
+	.w100{
+		width: 84% !important;
+		margin-left: 60px !important;
+		padding-left: 15px;
+	}
+
+	.d_menu_m{
+		.defaultDiv (55px, 100%, left);
+		border-right: 1px solid #3c3c3c;
+		display: none;
+		margin-right: -55px;
+		h1{
+			font-family: @mainFont;
+			font-size:26px;
+			color: #3c3c3c;
+			.transform(rotate(270deg));
+			.defaultDiv (165px, 135px, left);
+			font-weight: 100;
+			.transition( all 1s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+		}
+		&:hover{
+			cursor: pointer;
+			h1{
+				color: white;
+			}
+		}
+	}
+
+	.d_menu{
+		height: 100%;
+		float: left;
+		.transition( all 1s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+		ul{
+			width: 96%;
+			padding: 0 2%;
+			li{
+				.defaultDivHeight (100%, 10px, left);
+				border-bottom: 1px solid #3c3c3c;
+				.transition( all 1s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+				a{
+					.defaultDiv (94%, 20px, left);
+					padding: 3%;
+					font-family: @mainFont;
+					font-size:16px;
+					color: #3c3c3c;
+					text-align: left;
+				}
+				.active{
+					color:white !important;
+				}
+			}
+		}
+	}
+	.d_content{
+		height: 100%;
+		float: left;
+		.transition( all 1s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+		.liveSearch{
+			.defaultDiv (94%, 10px, left);
+			padding: 16px 1% 20px 45px;
+			border:none;
+			border-bottom: 1px solid #3c3c3c;
+			font-size: 16px;
+			font-family: @textFont;
+			text-align: left;
+			font-weight: 100;
+			color:#666;
+			background:url(../img/bg_search_duvidas.jpg)no-repeat;
+		}
+
+		.findCount{
+			.defaultDiv (94%, 10px, left);
+			padding: 16px 1% 2% 0;
+			border:none;
+			font-size: 14px;
+			font-family: @textFont;
+			text-align: left;
+			font-weight: 100;
+			color:#666;
+			font-style: italic;
+			display: none;
+		}
+		.ctDuvidas{
+			float: left;
+			.duvida{
+				max-height: 230px;
+				overflow: hidden;
+				padding:15px 0 0;
+				border-bottom: 1px solid #3c3c3c;
+				h1{
+					font-size: 25px;
+					font-family: @textFont;
+					text-align: left;
+					font-weight: 100;
+					color:#cacaca;
+					margin-bottom: 15px;
+					text-rendering: optimizeLegibility;
+					letter-spacing: 0.3px;
+				}
+				p{
+					font-size: 18px;
+					font-family: @textFont;
+					text-align: left;
+					font-weight: 100;
+					color:#cacaca;
+					line-height: 28px;
+					margin-bottom: 15px;
+					text-rendering: optimizeLegibility;
+					letter-spacing: 0.3px;
+				}
+				.dHover{
+					&:hover{
+						p{text-decoration: underline !important; cursor: pointer !important;}
+					}
+				}
+				.transition( all 1s cubic-bezier(0.165, 0.840, 0.440, 1.000));
+				.opacity(0);
+			}
+
+			.active{
+				.opacity(1) !important;
+			}
+		}
+
+	}
 }
 

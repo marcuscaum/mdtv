@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="author" content="Marcus Lucas P Caum - Agência Studio Imaxis">
 	<title>MidiaTV</title>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="less/animate.css">
 	<link rel="stylesheet" href="less/home.min.css">
     <script type="text/javascript"  src="js/jquery.js"></script>
     <script type="text/javascript"  src="animation/animation_edgePreload.js"></script>
